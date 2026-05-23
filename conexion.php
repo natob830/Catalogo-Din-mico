@@ -5,10 +5,17 @@
  */
 
 // Configuración de la conexión a la base de datos
-$servidor = "localhost";
-$usuario = "root";
-$contraseña = "";
-$basedatos = "sitio_personal";
+//$servidor = "localhost";
+//$usuario = "root";
+//$contraseña = "";
+//$basedatos = "sitio_personal";
+
+// Configuración de la conexión a la base de datos dash.infinityfree.com - MYSQL
+
+$servidor = "sql105.infinityfree.com";
+$usuario = "if0_42000126";
+$contraseña = "OsdpB8Z0Q5RgM";
+$basedatos = "if0_42000126_natoBdata";
 
 // Crear conexión
 $conexion = mysqli_connect($servidor, $usuario, $contraseña, $basedatos);
