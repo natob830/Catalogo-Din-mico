@@ -159,7 +159,7 @@ Este proyecto es de uso académico para la UTPL. Puede ser modificado y adaptado
 - ✅ Información profesional y académica
 
 ---
-
+**Usuario de prueba de ingreso es docente@utpl.edu.ec y la contraseña es 12345678** 
 **Última Actualización**: Enero 2026  
 **Estado**: ✅ Completo y Funcional
 
