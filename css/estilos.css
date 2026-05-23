@@ -1,0 +1,565 @@
+/* ===================================
+   VARIABLES Y COLORES PROFESIONALES
+   =================================== */
+:root {
+    --primary-color: #1a3a52;      /* Azul marino profesional */
+    --accent-color: #00a8a8;       /* Turquesa/Teal moderno */
+    --secondary-color: #2d3436;    /* Gris oscuro */
+    --light-bg: #f5f7fa;           /* Fondo claro */
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #6c757d;
+    --border-color: #e0e0e0;
+}
+
+/* ===================================
+   ESTILOS GLOBALES
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+/* ===================================
+   NAVEGACIÓN
+   =================================== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--white) !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateX(5px);
+    color: var(--accent-color) !important;
+}
+
+.navbar-brand i {
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* ===================================
+   SECCIÓN HERO
+   =================================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    transform: translate(100px, -100px);
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .text-primary {
+    color: var(--accent-color) !important;
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.hero-image {
+    max-width: 450px;
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-10px);
+}
+
+/* ===================================
+   BOTONES PROFESIONALES
+   =================================== */
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: var(--white) !important;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 168, 168, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 6px 20px rgba(26, 58, 82, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 6px 20px rgba(0, 168, 168, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   SECCIONES Y TARJETAS
+   =================================== */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), transparent);
+    border-radius: 2px;
+}
+
+section.py-5 {
+    background-color: var(--light-bg);
+}
+
+section.py-5:nth-child(odd) {
+    background-color: var(--white);
+}
+
+/* ===================================
+   TARJETAS
+   =================================== */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.card-title i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.hover-card {
+    border-left: 5px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.hover-card:hover {
+    border-left-color: var(--accent-color);
+}
+
+/* ===================================
+   ENCABEZADO DE PÁGINA
+   =================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 60px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.page-header .lead {
+    opacity: 0.95;
+}
+
+/* ===================================
+   FORMULARIO DE CONTACTO
+   =================================== */
+.form-control,
+.form-select,
+textarea.form-control {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 168, 168, 0.25);
+    color: var(--text-dark);
+}
+
+.form-label {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.form-label i {
+    color: var(--accent-color);
+}
+
+/* ===================================
+   ALERTAS
+   =================================== */
+.alert {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 5px solid #dc3545;
+}
+
+.alert i {
+    margin-right: 8px;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    margin-top: 80px;
+    padding: 40px 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================
+   ICONOGRAFÍA
+   =================================== */
+i.fa-2x {
+    color: var(--accent-color);
+}
+
+i.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* ===================================
+   BACKGROUND GRADIENT
+   =================================== */
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+}
+
+/* ===================================
+   UTILIDADES DE ESPACIADO
+   =================================== */
+.py-5 {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+.mt-5 {
+    margin-top: 60px !important;
+}
+
+.mb-5 {
+    margin-bottom: 60px !important;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 60px 0;
+}
+
+/* ===================================
+   RESPONSIVE MEDIA QUERIES
+   =================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 0.75rem 0;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .gap-3 {
+        gap: 1rem !important;
+    }
+
+    .btn-lg {
+        width: 100%;
+    }
+
+    .text-md-end {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .py-5,
+    .p-5 {
+        padding: 2rem !important;
+    }
+}
+
+/* ===================================
+   ANIMACIONES SUAVES
+   =================================== */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* ===================================
+   VALIDACIÓN DE FORMULARIO
+   =================================== */
+.form-control.is-invalid,
+.form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid,
+.form-control.is-valid:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.invalid-feedback {
+    display: block !important;
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    animation: slideInUp 0.3s ease-out;
+}
+
+.valid-feedback {
+    display: none;
+}
+
+/* ===================================
+   BOTONES DE VALIDACIÓN
+   =================================== */
+.btn-outline-secondary {
+    color: var(--secondary-color) !important;
+    border-color: var(--border-color) !important;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--light-bg) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 6px 20px rgba(45, 52, 54, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===================================
+   ICONOS DE VALIDACIÓN
+   =================================== */
+.form-control.is-invalid::placeholder {
+    color: rgba(220, 53, 69, 0.7);
+}
+
+.form-control.is-valid::placeholder {
+    color: rgba(40, 167, 69, 0.7);
+}
